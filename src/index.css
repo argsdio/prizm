@@ -1,0 +1,65 @@
+/* ---- Reset & Base ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --off-white: #f8f6f2;
+  --ink: #1a1816;
+  --muted: #8a8580;
+  --subtle: #dedad4;
+
+  --red: #e05b4b;
+  --orange: #e8874a;
+  --yellow: #d4a847;
+  --green: #5ba876;
+
+  --red-soft: #fdf0ee;
+  --orange-soft: #fdf4ee;
+  --yellow-soft: #fdf8ee;
+  --green-soft: #eef8f2;
+
+  --red-border: #efd6d2;
+  --orange-border: #ede0d4;
+  --yellow-border: #ebe5cf;
+  --green-border: #cde8d9;
+
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--off-white);
+  font-family: var(--font-body);
+  color: var(--ink);
+  overflow-x: hidden;
+}
+
+/* Subtle grain overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.5;
+}
+
+button {
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+textarea {
+  font-family: var(--font-body);
+}

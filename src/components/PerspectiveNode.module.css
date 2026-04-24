@@ -1,0 +1,127 @@
+.node {
+  border-radius: 12px;
+  border: 1.5px solid transparent;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s ease;
+}
+
+.node:hover {
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09);
+}
+
+/* ---- Header button ---- */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.chevron {
+  font-size: 0.65rem;
+  color: var(--muted);
+  display: inline-block;
+}
+
+/* ---- Body ---- */
+.body {
+  overflow: hidden;
+}
+
+.content {
+  padding: 0 22px 22px;
+  font-size: 0.91rem;
+  line-height: 1.78;
+  font-weight: 300;
+  color: #2e2b28;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ---- Questions ---- */
+.questionList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.questionItem {
+  padding: 11px 0 11px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+  position: relative;
+  font-size: 0.91rem;
+  line-height: 1.6;
+  font-weight: 300;
+  color: #2e2b28;
+}
+
+.questionItem:last-child {
+  border-bottom: none;
+}
+
+.questionItem::before {
+  content: '?';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: var(--muted);
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+/* ---- Color Themes ---- */
+.red {
+  background: var(--red-soft);
+  border-color: var(--red-border);
+}
+.red .dot { background: var(--red); }
+.red .label { color: var(--red); }
+
+.orange {
+  background: var(--orange-soft);
+  border-color: var(--orange-border);
+}
+.orange .dot { background: var(--orange); }
+.orange .label { color: var(--orange); }
+
+.yellow {
+  background: var(--yellow-soft);
+  border-color: var(--yellow-border);
+}
+.yellow .dot { background: var(--yellow); }
+.yellow .label { color: #b8882a; }
+
+.green {
+  background: var(--green-soft);
+  border-color: var(--green-border);
+}
+.green .dot { background: var(--green); }
+.green .label { color: #3d8a5c; }
