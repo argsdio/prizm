@@ -14,17 +14,18 @@ export default function InputScreen({ onSubmit, error }) {
   return (
     <section className={styles.screen}>
       <h1 className={styles.headline}>
-        What&rsquo;s your<br />view?
+        what&rsquo;s your<br />view?
       </h1>
+      {/* 
       <p className={styles.sub}>
-        Share an opinion — any opinion. Prizm will refract it into perspectives
+        share an opinion — any opinion. prizm will refract it into perspectives
         that prepare you to listen, not just respond.
-      </p>
-
+      </p> 
+      */}
       <div className={styles.inputWrap}>
         <textarea
           className={styles.textarea}
-          placeholder="e.g. Pineapple should never be on pizza."
+          placeholder="share an opinion, e.g, 'pineapple should never be on pizza!'"
           rows={4}
           value={value}
           onChange={(e) => setValue(e.target.value)}
@@ -43,7 +44,7 @@ export default function InputScreen({ onSubmit, error }) {
           onClick={() => onSubmit(value)}
           disabled={!value.trim()}
         >
-          Pass it through the prism →
+          Pass it through the prizm →
         </button>
       </div>
     </section>
