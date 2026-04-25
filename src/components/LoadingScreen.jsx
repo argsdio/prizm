@@ -87,7 +87,7 @@ export default function LoadingScreen() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
       >
-        Refracting your view
+        refracting your view
       </motion.p>
       <motion.p
         className={styles.sublabel}
@@ -95,7 +95,7 @@ export default function LoadingScreen() {
         animate={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.5 }}
       >
-        Finding the spectrum
+        listen first, discuss second!
       </motion.p>
     </section>
   )
